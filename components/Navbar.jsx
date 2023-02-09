@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <div className='fixed w-full h-20 shadow-xl z-[100]'>
       <div className='flex justify-between items-center w-full h-full px-5 md:px-10   3xl:p-16'>
-        <Image src='/../public/assets/RM.png' alt='/' width='125' height='50' />
+        <Image src='/RM.png' alt='/' width='125' height='50' />
         <div>
           <ul className='hidden md:flex'>
             <Link href='/'>
