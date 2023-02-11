@@ -56,6 +56,7 @@ export default function About() {
           variants={dVariant}
           initial='hidden'
           whileInView='show'
+          viewport={{ once: true }}
           className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 z-0'
         >
           <img className='rounded-xl' src={'/assets/projects/navy.jpg'} alt='' />
