@@ -2,6 +2,8 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { GITHUB, LINKEDIN } from '@/lib/constants';
+import Link from 'next/link';
 
 export default function MainInfo() {
   const iconContainer = {
@@ -58,13 +60,17 @@ export default function MainInfo() {
               variants={iconChildren}
               className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-300'
             >
-              <FaLinkedinIn />
+              <Link href={LINKEDIN.url}>
+                <FaLinkedinIn />
+              </Link>
             </motion.div>
             <motion.div
               variants={iconChildren}
               className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-300'
             >
-              <FaGithub />
+              <Link href={GITHUB.url}>
+                <FaGithub />
+              </Link>
             </motion.div>
             <motion.div
               variants={iconChildren}
