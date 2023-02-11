@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div className='fixed w-full h-20 shadow-xl z-[100]'>
-      <div className='flex justify-between items-center w-full h-full px-5 md:px-10   3xl:p-16'>
+      <div className='flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16'>
         <Image src='/RM.png' alt='' width='125' height='50' />
         <div>
           <ul className='hidden md:flex'>
@@ -41,11 +41,11 @@ export default function Navbar() {
         <div
           className={
             nav
-              ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
           }
         >
-          <div>
+          <div className='flex flex-col justify-between'>
             <div className='flex w-full items-center justify-between'>
               <Image src='/RM.png' alt='' width='125' height='50' />
               <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
@@ -74,8 +74,8 @@ export default function Navbar() {
                 <li className='py-4 text-sm'>Contact</li>
               </Link>
             </ul>
-            <div className='pt-40'>
-              <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
+            <div className='pt-16'>
+              <p className='uppercase tracking-widest text-primary'>Let's Connect</p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <FaLinkedinIn />
