@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { GITHUB, LINKEDIN } from '@/lib/constants';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -12,7 +13,7 @@ export default function Navbar() {
   return (
     <div className='fixed w-full h-20 shadow-xl z-50'>
       <div className='flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16'>
-        <Link href='/'>
+        <Link href='#'>
           <Image src='/RM.png' alt='' width='125' height='50' />
         </Link>
         <div>
@@ -63,10 +64,10 @@ export default function Navbar() {
               <Link href='/'>
                 <li className='py-4 text-sm'>Home</li>
               </Link>
-              <Link href='/'>
+              <Link href='#about'>
                 <li className='py-4 text-sm'>About</li>
               </Link>
-              <Link href='/'>
+              <Link href='#skills'>
                 <li className='py-4 text-sm'>Skills</li>
               </Link>
               <Link href='/'>
@@ -80,16 +81,22 @@ export default function Navbar() {
               <p className='uppercase tracking-widest text-primary'>Let's Connect</p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaLinkedinIn />
+                  <Link href={LINKEDIN.url}>
+                    <FaLinkedinIn />
+                  </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaGithub />
+                  <Link href={GITHUB.url}>
+                    <FaGithub />
+                  </Link>
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <AiOutlineMail />
                 </div>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <BsFillPersonLinesFill />
+                  <Link href='/resume'>
+                    <BsFillPersonLinesFill />
+                  </Link>
                 </div>
               </div>
             </div>
