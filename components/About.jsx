@@ -26,7 +26,7 @@ export default function About() {
   return (
     <div className='w-full md:h-screen p-2 flex items-center md:pt-24 pt-28'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
-        <motion.div variants={container} initial='hidden' whileInView='show' className='col-span-2'>
+        <motion.div variants={container} initial='hidden' whileInView='show' viewport={{ once: true }} className='col-span-2'>
           <motion.p variants={pVariant} className='uppercase text-xl tracking-widest text-primary'>
             About
           </motion.p>

@@ -45,10 +45,16 @@ const Skills = () => {
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Skills</p>
         <h2 className='py-4'>What I Can Do</h2>
-        <motion.div variants={cardContainer} initial='hidden' whileInView='show' className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+        <motion.div
+          variants={cardContainer}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: true }}
+          className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'
+        >
           {skillsArray.map((skill) => {
             return (
-              <motion.div variants={cards} className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
+              <motion.div key={skill.name} variants={cards} className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
                 <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                   <div className='m-auto'>
                     <Image src={skill.image} width='64px' height='64px' alt='/' />

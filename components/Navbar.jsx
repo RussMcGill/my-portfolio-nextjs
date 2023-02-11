@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div className='fixed w-full h-20 shadow-xl z-[100]'>
-      <div className='flex justify-between items-center w-full h-full px-5 md:px-10   3xl:p-16'>
+      <div className='flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16'>
         <Image src='/RM.png' alt='' width='125' height='50' />
         <div>
           <ul className='hidden md:flex'>
