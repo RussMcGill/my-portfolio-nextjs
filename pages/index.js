@@ -17,8 +17,8 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Navbar />
       <div className='md:snap-y snap-mandatory h-screen w-screen overflow-auto'>
-        <Navbar />
         <div className='snap-center md:h-screen w-screen'>
           <MainInfo />
         </div>

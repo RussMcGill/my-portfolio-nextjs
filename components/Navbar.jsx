@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -10,18 +10,20 @@ export default function Navbar() {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100]'>
+    <div className='fixed w-full h-20 shadow-xl z-50'>
       <div className='flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16'>
-        <Image src='/RM.png' alt='' width='125' height='50' />
+        <Link href='/'>
+          <Image src='/RM.png' alt='' width='125' height='50' />
+        </Link>
         <div>
           <ul className='hidden md:flex'>
             <Link href='/'>
               <li className='ml-10 text-sm uppercase hover: border-b'>Home</li>
             </Link>
-            <Link href='/'>
+            <Link href='#about'>
               <li className='ml-10 text-sm uppercase hover: border-b'>About</li>
             </Link>
-            <Link href='/'>
+            <Link href='#skills'>
               <li className='ml-10 text-sm uppercase hover: border-b'>Skills</li>
             </Link>
             <Link href='/'>
