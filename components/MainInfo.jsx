@@ -23,12 +23,17 @@ export default function MainInfo() {
 
   const mainInfoChildren = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { delay: 2, duration: 1 } },
+    show: { opacity: 1, transition: { delay: 1.5, duration: 1 } },
   };
 
   const iconChildren = {
     hidden: { opacity: 0, y: -200 },
     show: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
+  const iconButtons = {
+    whileHover: { scale: 1.1 },
+    whileTap: { scale: 0.9 },
   };
 
   return (
@@ -56,34 +61,46 @@ export default function MainInfo() {
             viewport={{ once: true }}
             className='flex items-center justify-between max-w-[330px] m-auto py-4'
           >
-            <motion.div
-              variants={iconChildren}
-              className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-300'
-            >
-              <Link href={LINKEDIN.url}>
+            <Link href={LINKEDIN.url} target='_blank'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={iconChildren}
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+              >
                 <FaLinkedinIn />
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={iconChildren}
-              className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-300'
-            >
-              <Link href={GITHUB.url}>
+              </motion.button>
+            </Link>
+            <Link href={GITHUB.url} target='_blank'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={iconChildren}
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+              >
                 <FaGithub />
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={iconChildren}
-              className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-300'
-            >
-              <AiOutlineMail />
-            </motion.div>
-            <motion.div
-              variants={iconChildren}
-              className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-115 ease-in duration-300'
-            >
-              <BsFillPersonLinesFill />
-            </motion.div>
+              </motion.button>
+            </Link>
+            <Link href={'/'} target='_blank'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={iconChildren}
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+              >
+                <AiOutlineMail />
+              </motion.button>
+            </Link>
+            <Link href={'/'} target='_blank'>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                variants={iconChildren}
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+              >
+                <BsFillPersonLinesFill />
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </div>
