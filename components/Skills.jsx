@@ -9,8 +9,13 @@ import Github from '../public/assets/skills/github1.png';
 import NextJS from '../public/assets/skills/nextjs.png';
 import NodeJS from '../public/assets/skills/nodejs.png';
 import MUI from '../public/assets/skills/mui.png';
+import Docker from '../public/assets/skills/docker.png';
+import PostgreSQL from '../public/assets/skills/postgresql.png';
+import AWS from '../public/assets/skills/aws.png';
+import { GITHUB } from '@/lib/constants';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Skills = () => {
   const cardContainer = {
@@ -29,15 +34,18 @@ const Skills = () => {
   };
 
   const skillsArray = [
-    { name: 'Html', image: Html },
-    { name: 'Css', image: Css },
-    { name: 'Javascript', image: Javascript },
-    { name: 'React.JS', image: ReactImg },
-    { name: 'Tailwind', image: Tailwind },
-    { name: 'Github', image: Github },
-    { name: 'Next.JS', image: NextJS },
-    { name: 'Node.JS', image: NodeJS },
-    { name: 'MUI', image: MUI },
+    { name: 'Html', image: Html, url: 'https://html.com/html5/' },
+    { name: 'Css', image: Css, url: '' },
+    { name: 'Javascript', image: Javascript, url: 'https://www.javascript.com/' },
+    { name: 'React.JS', image: ReactImg, url: 'https://reactjs.org/' },
+    { name: 'Next.JS', image: NextJS, url: 'https://nextjs.org/' },
+    { name: 'Node.JS', image: NodeJS, url: 'https://nodejs.org/en/' },
+    { name: 'Github', image: Github, url: 'https://github.com' },
+    { name: 'MUI', image: MUI, url: 'https://mui.com/' },
+    { name: 'Tailwind', image: Tailwind, url: 'https://tailwindcss.com/' },
+    { name: 'Docker', image: Docker, url: 'https://www.docker.com/' },
+    { name: 'PostgreSQL', image: PostgreSQL, url: 'https://www.postgresql.org/' },
+    { name: 'Amazon Web Services', image: AWS, url: 'https://aws.amazon.com/' },
   ];
 
   return (
@@ -54,16 +62,24 @@ const Skills = () => {
         >
           {skillsArray.map((skill) => {
             return (
-              <motion.div key={skill.name} variants={cards} className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-                <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                  <div className='m-auto'>
-                    <Image src={skill.image} width='64px' height='64px' alt='/' />
+              <Link href={skill.url} target='_blank'>
+                <motion.button
+                  key={skill.name}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  variants={cards}
+                  className='p-6 shadow-xl rounded-xl'
+                >
+                  <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+                    <div className='m-auto'>
+                      <Image src={skill.image} width='64px' height='64px' alt='/' />
+                    </div>
+                    <div className='flex flex-col items-center justify-center'>
+                      <h3>{`${skill.name}`}</h3>
+                    </div>
                   </div>
-                  <div className='flex flex-col items-center justify-center'>
-                    <h3>{`${skill.name}`}</h3>
-                  </div>
-                </div>
-              </motion.div>
+                </motion.button>
+              </Link>
             );
           })}
         </motion.div>
