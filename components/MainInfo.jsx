@@ -41,16 +41,16 @@ export default function MainInfo() {
       <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
         <div>
           <motion.div variants={mainInfoContainer} initial='hidden' whileInView='show' viewport={{ once: true }}>
-            <motion.p variants={mainInfoChildren} className='uppercase text-sm tracking-widest text-gray-600'>
+            <motion.p variants={mainInfoChildren} className='uppercase text-sm tracking-widest text-gray-600 dark:text-white'>
               let's build something awesome together
             </motion.p>
-            <motion.h1 variants={mainInfoChildren} className='p-4 text-gray-700'>
+            <motion.h1 variants={mainInfoChildren} className='p-4 text-gray-700 dark:text-white'>
               Hi, I'm <span className='text-primary'>Russ</span>{' '}
             </motion.h1>
-            <motion.h1 variants={mainInfoChildren} className='py-2 text-gray-700'>
+            <motion.h1 variants={mainInfoChildren} className='py-2 text-gray-700 dark:text-white'>
               A Web Developer
             </motion.h1>
-            <motion.p variants={mainInfoChildren} className='py-4 text-gray-600 max-w-[70%] m-auto'>
+            <motion.p variants={mainInfoChildren} className='py-4 text-gray-600 dark:text-white max-w-[70%] m-auto'>
               I'm a full-stack developer specializing in building exceptional digital experiances.{' '}
             </motion.p>
           </motion.div>
@@ -66,7 +66,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
               >
                 <FaLinkedinIn />
               </motion.button>
@@ -76,7 +76,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
               >
                 <FaGithub />
               </motion.button>
@@ -86,7 +86,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
               >
                 <AiOutlineMail />
               </motion.button>
@@ -96,7 +96,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg shadow-gray-400'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
               >
                 <BsFillPersonLinesFill />
               </motion.button>

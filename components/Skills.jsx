@@ -68,7 +68,7 @@ const Skills = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   variants={cards}
-                  className='p-6 shadow-xl rounded-xl'
+                  className='p-6 shadow-xl rounded-xl dark:bg-slate-500'
                 >
                   <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                     <div className='m-auto'>
