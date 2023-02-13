@@ -33,20 +33,20 @@ export default function About() {
           <motion.h2 variants={pVariant} className='md:py-4 py-2'>
             Who I Am
           </motion.h2>
-          <motion.p variants={pVariant} className='py-2 text-gray-600'>
+          <motion.p variants={pVariant} className='py-2 text-gray-600 dark:text-white'>
             Short about title
           </motion.p>
-          <motion.p variants={pVariant} className='py-2 text-gray-600'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsum, dicta esse corrupti, itaque dolores, odio nemo id sunt
-            voluptates consequatur eligendi nisi nihil accusantium aliquam minima. Beatae, eos esse. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Eveniet a odio, assumenda ipsam quis cum dolor ab facilis reiciendis voluptatum soluta deleniti mollitia iure maxime.
-            Corporis dolor alias explicabo vitae.
+          <motion.p variants={pVariant} className='py-2 text-gray-600 dark:text-white'>
+            I am Russ McGill, a highly motivated and dedicated professional with extensive experience in various industries. Throughout my career, I
+            have established myself as a leader in my field with a proven track record of success. My exceptional skills in problem-solving, strategic
+            planning, and relationship building have helped me make a significant impact in the organizations I have worked with.
           </motion.p>
-          <motion.p variants={pVariant} className='py-2 text-gray-600'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsum, dicta esse corrupti, itaque dolores, odio nemo id sunt
-            voluptates consequatur eligendi nisi nihil accusantium aliquam minima. Beatae, eos esse. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Eveniet a odio, assumenda ipsam quis cum dolor ab facilis reiciendis voluptatum soluta deleniti mollitia iure maxime.
-            Corporis dolor alias explicabo vitae.
+          <motion.p variants={pVariant} className='py-2 text-gray-600 dark:text-white'>
+            In addition to my technical expertise, I am a gifted communicator and have built a reputation as a trusted advisor and reliable partner.
+            My interpersonal skills have helped me form strong relationships with clients, colleagues, and partners, and I bring a positive and
+            energetic approach to every project. I am always eager to take on new challenges and continue to develop my skills. With my combination of
+            technical knowledge, business acumen, and interpersonal skills, I am confident in my ability to make a valuable contribution to any
+            organization.
           </motion.p>
           <motion.div variants={pVariant}>
             <Link href='/projects'> Check out some of my latest projects!</Link>
@@ -57,7 +57,7 @@ export default function About() {
           initial='hidden'
           whileInView='show'
           viewport={{ once: true }}
-          className='w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 z-0'
+          className='w-full h-auto m-auto shadow-xl light:shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 z-0'
         >
           <img className='rounded-xl' src={'/assets/home/navy.jpg'} alt='' />
         </motion.div>
