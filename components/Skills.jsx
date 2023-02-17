@@ -16,6 +16,7 @@ import { GITHUB } from '@/lib/constants';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Skill from './Skill';
 
 const Skills = () => {
   const cardContainer = {
@@ -70,14 +71,7 @@ const Skills = () => {
                   variants={cards}
                   className='p-6 shadow-xl rounded-xl dark:bg-slate-500'
                 >
-                  <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-                    <div className='m-auto'>
-                      <Image src={skill.image} width='64px' height='64px' alt='/' />
-                    </div>
-                    <div className='flex flex-col items-center justify-center'>
-                      <h3>{`${skill.name}`}</h3>
-                    </div>
-                  </div>
+                  <Skill skill={skill} />
                 </motion.button>
               </Link>
             );
