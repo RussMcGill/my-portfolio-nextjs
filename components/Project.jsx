@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Project({ title, backgroundImg, tech, projectUrl, techStack }) {
   return (
-    <div className='relative flex flex-col items-center justify-between h-auto w-full bg-slate-300 dark:bg-slate-700 px-5 light:shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
+    <div className='relative flex flex-col items-center justify-between h-auto w-full bg-grey300 dark:bg-grey800 px-5 light:shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-[#5651e5] to-[#709dff]'>
       <div className='py-5'>
         <h2 className='text-primary'>{title}</h2>
       </div>
@@ -25,7 +25,7 @@ export default function Project({ title, backgroundImg, tech, projectUrl, techSt
       </div>
       <div className='flex flex-wrap gap-2 justify-evenly m-2 group-hover:opacity-10'>
         {techStack.map((tech) => {
-          return <div className=' bg-slate-600 dark:bg-slate-500 rounded p-1 text-white text-xs md:text-sm'>{tech}</div>;
+          return <div className='bg-grey500 dark:bg-grey600 rounded p-1 text-white text-xs md:text-sm'>{tech}</div>;
         })}
       </div>
     </div>

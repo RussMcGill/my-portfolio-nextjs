@@ -66,7 +66,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800'
               >
                 <FaLinkedinIn />
               </motion.button>
@@ -76,7 +76,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800'
               >
                 <FaGithub />
               </motion.button>
@@ -86,7 +86,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800'
               >
                 <AiOutlineMail />
               </motion.button>
@@ -96,7 +96,7 @@ export default function MainInfo() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={iconChildren}
-                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-slate-600'
+                className='p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800'
               >
                 <BsFillPersonLinesFill />
               </motion.button>

@@ -19,7 +19,7 @@ export default function Home() {
         <div className='snap-start md:h-screen w-screen'>
           <Skills />
         </div>
-        <div className='snap-start md:h-screen w-screen'>
+        <div className='snap-start md:h-[2000px] w-screen'>
           <Projects />
         </div>
       </div>

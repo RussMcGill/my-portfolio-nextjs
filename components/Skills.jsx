@@ -50,9 +50,9 @@ const Skills = () => {
   ];
 
   return (
-    <div id='skills' className='w-full md:h-screen md:p-2 pt-28 px-2'>
-      <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Skills</p>
+    <div id='skills' className='w-full md:h-screen md:p-2 pt-28 px-2 '>
+      <div className='max-w-[1200px] mx-auto flex flex-col justify-center h-full'>
+        <p className='text-xl tracking-widest uppercase text-primary'>Skills</p>
         <h2 className='py-4'>What I Can Do</h2>
         <motion.div
           variants={cardContainer}
@@ -69,7 +69,7 @@ const Skills = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   variants={cards}
-                  className='p-6 shadow-xl rounded-xl dark:bg-slate-500'
+                  className='p-6 shadow-xl rounded-xl dark:bg-grey800'
                 >
                   <Skill skill={skill} />
                 </motion.button>

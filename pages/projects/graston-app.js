@@ -4,8 +4,9 @@ import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import slide1 from '../../public/assets/projects/grastonApp.png';
-import slide2 from '../../public/assets/projects/findTraining.png';
+import grastonSignup from '../../public/assets/projects/grastonSignup.png';
+import grastonTrainings from '../../public/assets/projects/grastonTrainings.png';
+import grastonLocateProvider from '../../public/assets/projects/grastonLocateProvider.png';
 
 export default function GrastonApp() {
   const [showModal, setShowModal] = useState(false);
@@ -17,21 +18,26 @@ export default function GrastonApp() {
   const screenshotSlides = [
     {
       id: 'slide-1',
-      image: slide1,
+      title: 'Graston Sign Up',
+      image: grastonSignup,
       caption: 'Login/Sign up screen. Authenticating with AWS Cognito through the Graston API.',
+      url: 'https://app.grastontechnique.com/signup',
     },
     {
       id: 'slide-2',
-      image: slide2,
-      caption: 'Display all available trainings on a map using Google Maps API.',
+      title: 'Graston Trainings',
+      image: grastonTrainings,
+      caption: 'Display all available trainings on a map using Google Maps API, filterable by city, state, and zip code.',
+      url: 'https://app.grastontechnique.com/trainings/M1',
+    },
+    {
+      id: 'slide-3',
+      title: 'Graston Locate a Provider',
+      image: grastonLocateProvider,
+      caption: 'Locate a provider on a map using Google Maps API.',
+      url: 'https://app.grastontechnique.com/locate-provider',
     },
   ];
-
-  function openModal(slide) {
-    setShowModal(true);
-    setModalImage(slide.image);
-    setmodalText(slide.caption);
-  }
 
   function prevSlide() {
     const isFirstSlide = currentIndex === 0;
@@ -45,35 +51,28 @@ export default function GrastonApp() {
   }
 
   return (
-    <div className='w-full'>
-      <div className='w-screen h-[20vh] relative'>
+    <div className='w-full pt-20'>
+      {/* <div className='w-screen h-[20vh] relative'>
         <div className='absolute top-0 left-0 w-full h-[20vh] bg-black/70 z-10' />
-        {/* <Image className='absolute z-1' fill style={{ objectFit: 'cover' }} src={'/assets/projects/grastonApp.png'} alt='/' /> */}
+        <Image className='absolute z-1' fill style={{ objectFit: 'cover' }} src={'/assets/projects/grastonApp.png'} alt='/' />
         <div className='absolute top-[60%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
           <h2 className='py-2'>Graston App</h2>
           <h3>Next JS / Material-UI / Heroku</h3>
         </div>
-      </div>
-      <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
-        <div className='col-span-4'>
-          <p>Project</p>
-          <h2>Overview</h2>
-          {/* <p>
-            I built this application in React JS and is hosted on GitHub pages. This app features user authentication with firebase as well as the
-            firestore cloud storage database. This application is pulling movie data from an the IMDB movie API and displaying different categories.
-            It features horizontal sliding and a featured selection. The useContext hook is also being implemented for app-wide state management.
-          </p> */}
-          <p>
-            This app was built as a checkout funnel and a place for customers to track their training status. This application pulls customer,
-            training, checkout data from the Graston API. The app has multiple checkout funnels, training selection pages, a profile page for
-            clinicans to track their training status, a Locate-a-Provider page for potential patients to be able to find a trained clinician near
-            them.
-          </p>
-        </div>
+      </div> */}
+      <div className='max-w-[1000px] mx-auto px-2 md:px-8 py-8'>
+        <p>Project</p>
+        <h2>Overview</h2>
+        <p>
+          This app was built as a backend app for Graston Techniques main website. The app has multiple checkout funnels, training selection pages, a
+          profile page for clinicans to track their training status, as well as a Locate-a-Provider page for potential patients to be able to find a
+          trained clinician near them. This application pulls customer, training, checkout data from the Graston API.
+        </p>
       </div>
       <div className='flex flex-col gap-2 mt-5 items-center justify-center'>
-        <h2 className='text-primary'>Screenshots</h2>
-        <div className='max-w-[1200px] h-[500px] sm:min-h-[600px] md:min-h-[850px] lg:min-h-[1000px] w-full m-auto px-10 relative group'>
+        <h3 className='text-primary text-2xl'>Screenshots</h3>
+        <h2>{screenshotSlides[currentIndex].title}</h2>
+        <div className=' h-[280px] w-[350px] sm:h-[480px] sm:w-[600px] md:h-[625px] md:w-[770px] lg:w-[1000px] lg:min-h-[800px] m-auto px-2 relative group'>
           <div
             style={{ backgroundImage: `url(${screenshotSlides[currentIndex].image.src})` }}
             className='w-full h-full rounded-2xl bg-center bg-cover duration-500 '
@@ -93,12 +92,18 @@ export default function GrastonApp() {
             </div>
           ))}
         </div>
-        <p>{screenshotSlides[currentIndex].caption}</p>
+        <p className='mb-2'>{screenshotSlides[currentIndex].caption}</p>
+        <div className='flex gap-2 flex-wrap justify-center'>
+          {screenshotSlides.map((slide, index) => (
+            <Link href={slide.url} target='_blank'>
+              <button className='rounded bg-primary p-2'>View {slide.title} Live</button>
+            </Link>
+          ))}
+        </div>
+        <Link href='/#projects'>
+          <p className='underline cursor-pointer my-10'>Back</p>
+        </Link>
       </div>
-
-      <Link href='/#projects'>
-        <p className='underline cursor-pointer'>Back</p>
-      </Link>
     </div>
   );
 }

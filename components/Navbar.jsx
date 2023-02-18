@@ -12,7 +12,7 @@ export default function Navbar({ theme, setTheme }) {
   const [nav, setNav] = useState(false);
 
   return (
-    <div className='fixed w-full h-20 shadow-xl bg-background dark:bg-slate-800 z-[100]'>
+    <div className='fixed w-full h-20 shadow-xl bg-background dark:bg-grey800 z-[100]'>
       <div className='flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16'>
         <Link href='#'>
           <Image src='/RM.png' alt='' width='125' height='50' />
