@@ -1,6 +1,7 @@
 import { GITHUB, LINKEDIN } from '@/lib/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -8,6 +9,8 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/home/contact.jpg';
 
 const Contact = () => {
+  const router = useRouter();
+
   return (
     <div id="contact" className="w-full lg:h-screen flex flex-col items-center justify-center">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
@@ -34,7 +37,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="uppercase pt-8">Connect With Me</p>
-                <div className="flex items-center justify-between py-4">
+                <div className="flex items-center justify-around py-4">
                   <Link href={LINKEDIN.url} target="_blank" rel="noreferrer">
                     <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <FaLinkedinIn />
@@ -46,21 +49,25 @@ const Contact = () => {
                     </div>
                   </Link>
 
-                  <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <button
+                    className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                    onClick={() => router.push('mailto:russ@russmcgill.com')}
+                  >
                     <AiOutlineMail />
-                  </div>
-                  <Link href="/resume">
+                  </button>
+                  {/* TODO: Setup Resume section */}
+                  {/* <Link href="/resume">
                     <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                       <BsFillPersonLinesFill />
                     </div>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
           </div>
 
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-xl light:shadow-gray-400 bg-grey800 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-xl light:shadow-gray-400 dark:bg-grey800 rounded-xl lg:p-4">
             <div className="p-4">
               <form
                 action="https://getform.io/f/fe232027-5d2f-4ece-b5fc-06318765f339"
@@ -117,8 +124,8 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="#home">
-            <div className="rounded-full shadow-lg light:shadow-gray-400 bg-grey800 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <HiOutlineChevronDoubleUp className="text-white" size={30} />
+            <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey800 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <HiOutlineChevronDoubleUp size={30} />
             </div>
           </Link>
         </div>

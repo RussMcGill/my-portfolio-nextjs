@@ -8,9 +8,12 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { GITHUB, LINKEDIN } from '@/lib/constants';
+import { useRouter } from 'next/router';
 
 export default function Navbar({ theme, setTheme }) {
   const [nav, setNav] = useState(false);
+
+  const router = useRouter();
 
   return (
     <div className="fixed w-full h-20 shadow-xl bg-background dark:bg-grey800 z-[100]">
@@ -90,43 +93,50 @@ export default function Navbar({ theme, setTheme }) {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
+              <Link href="/" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Home</li>
               </Link>
-              <Link href="/#about">
+              <Link href="/#about" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/#skills">
+              <Link href="/#skills" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Skills</li>
               </Link>
-              <Link href="/#projects">
+              <Link href="/#projects" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Project</li>
               </Link>
-              <Link href="/#contact">
+              <Link href="/#contact" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Contact</li>
               </Link>
             </ul>
-            <div className="pt-16">
+            <div className="pt-5 xs:pt-16">
               <p className="uppercase tracking-widest text-primary">Let's Connect</p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={LINKEDIN.url}>
+                  <Link href={LINKEDIN.url} target="_blank" onClick={() => setNav(false)}>
                     <FaLinkedinIn />
                   </Link>
                 </div>
                 <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={GITHUB.url}>
+                  <Link href={GITHUB.url} target="_blank" onClick={() => setNav(false)}>
                     <FaGithub />
                   </Link>
                 </div>
                 <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail />
+                  <button
+                    onClick={() => {
+                      setNav(false);
+                      router.push('mailto:russ@russmcgill.com');
+                    }}
+                  >
+                    <AiOutlineMail />
+                  </button>
                 </div>
-                <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href="/resume">
+                {/* <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <Link href="/resume" onClick={() => setNav(false)}>
                     <BsFillPersonLinesFill />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
