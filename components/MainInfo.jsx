@@ -4,8 +4,10 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { GITHUB, LINKEDIN } from '@/lib/constants';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function MainInfo() {
+  const router = useRouter();
   const iconContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -70,7 +72,8 @@ export default function MainInfo() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="flex items-center justify-between max-w-[330px] m-auto py-4"
+            // TODO: Change back to justify-between when I get resume button setup
+            className="flex items-center justify-around max-w-[330px] m-auto py-4"
           >
             <Link href={LINKEDIN.url} target="_blank">
               <motion.button
@@ -92,17 +95,16 @@ export default function MainInfo() {
                 <FaGithub />
               </motion.button>
             </Link>
-            <Link href={'/'} target="_blank">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                variants={iconChildren}
-                className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800"
-              >
-                <AiOutlineMail />
-              </motion.button>
-            </Link>
-            <Link href={'/'} target="_blank">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              variants={iconChildren}
+              className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800"
+              onClick={() => router.push('mailto:russ@russmcgill.com')}
+            >
+              <AiOutlineMail />
+            </motion.button>
+            {/* <Link href={'/'} target="_blank">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -111,7 +113,7 @@ export default function MainInfo() {
               >
                 <BsFillPersonLinesFill />
               </motion.button>
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
       </div>
