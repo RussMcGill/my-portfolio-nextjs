@@ -6,12 +6,12 @@ import { ThemeProvider } from 'next-themes';
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <ThemeProvider attribute='class'>
+      <ThemeProvider attribute="class">
         <Container>
           <Component {...pageProps} />
         </Container>
       </ThemeProvider>
-      <Analytics />
+      {process.env.NEXT_PUBLIC_ENV === 'production' ? <Analytics /> : null}
     </>
   );
 }

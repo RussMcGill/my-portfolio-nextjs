@@ -13,9 +13,14 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      xs: '350px',
+      ...defaultTheme.screens,
+    },
     extend: {
       screens: {
-        xs: '475px',
+        '2k': '2560px',
+        '4k': '3840px',
       },
       colors: {
         // primary: '#5651e5',
