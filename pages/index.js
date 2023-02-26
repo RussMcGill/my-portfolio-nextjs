@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function Home() {
   return (
     <>
-      <div className="md:snap-y snap-mandatory h-screen w-screen overflow-auto">
+      <div className="2k:snap-y snap-mandatory h-screen w-screen overflow-auto">
         <div className="snap-start md:h-screen w-screen">
           <MainInfo />
         </div>
@@ -20,10 +20,10 @@ export default function Home() {
         <div className="snap-start md:h-screen w-screen">
           <Skills />
         </div>
-        <div className="snap-start md:h-[2000px] w-screen">
+        <div className="snap-start 4k:h-screen w-screen">
           <Projects />
         </div>
-        <div className="snap-start md:h-[2000px] w-screen">
+        <div className="snap-start 2k:h-screen w-screen">
           <Contact />
         </div>
       </div>
