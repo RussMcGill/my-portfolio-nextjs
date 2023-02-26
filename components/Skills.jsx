@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import Html from '../public/assets/skills/html.png';
 import Css from '../public/assets/skills/css.png';
@@ -12,28 +11,11 @@ import MUI from '../public/assets/skills/mui.png';
 import Docker from '../public/assets/skills/docker.png';
 import PostgreSQL from '../public/assets/skills/postgresql.png';
 import AWS from '../public/assets/skills/aws.png';
-import { GITHUB } from '@/lib/constants';
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Skill from './Skill';
 
 const Skills = () => {
-  const cardContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const cards = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
-  };
-
   const skillsArray = [
     { name: 'Html', image: Html, url: 'https://html.com/html5/' },
     { name: 'Css', image: Css, url: '' },
@@ -54,29 +36,17 @@ const Skills = () => {
       <div className="max-w-[1200px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
         <h2 className="py-4">What I Can Do</h2>
-        <motion.div
-          variants={cardContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {skillsArray.map((skill, index) => {
             return (
               <Link href={skill.url} target="_blank" key={index}>
-                <motion.button
-                  key={skill.name}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  variants={cards}
-                  className="p-6 shadow-xl rounded-xl dark:bg-grey800"
-                >
+                <button className="p-6 shadow-xl rounded-xl dark:bg-grey800">
                   <Skill skill={skill} />
-                </motion.button>
+                </button>
               </Link>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
