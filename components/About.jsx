@@ -59,7 +59,7 @@ export default function About() {
             make a valuable contribution to any organization.
           </p>
           <div variants={pVariant}>
-            <Link href="/projects"> Check out some of my latest projects!</Link>
+            <Link href="#projects"> Check out some of my latest projects!</Link>
           </div>
         </div>
         <div
