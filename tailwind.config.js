@@ -37,37 +37,6 @@ module.exports = {
         grey100: '#F5F5F5',
         grey50: '#FAFAFA',
       },
-      keyframes: {
-        dropIn: {
-          '0%': {
-            transform: 'translateY(-200%)',
-            opacity: 0,
-          },
-          '100%': {
-            transform: 'translateY(0%)',
-            opacity: 1,
-          },
-        },
-        fadeIn: {
-          '0%': {
-            opacity: 0,
-          },
-          '100%': {
-            opacity: 1,
-          },
-        },
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
-      },
-      animation: {
-        dropIn1: 'dropIn 1s ease-in-out forwards',
-        dropIn2: 'dropIn 1s ease-in-out .3s forwards',
-        dropIn3: 'dropIn 1s ease-in-out .6s forwards',
-        fadeIn: 'fadeIn 1s ease-in 1.5s forwards',
-        wiggle: 'wiggle 1s ease-in-out infinite',
-      },
     },
   },
   plugins: [],

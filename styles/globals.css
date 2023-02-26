@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
+  scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -33,24 +34,6 @@ html {
   /* button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-primary to-[#709dff] text-white
   } */
-  
-}
-.home-socials-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2;
-  max-width: 330px;
-  margin: auto;
-  padding: 4, 0, 4;
-}
-.home-socials {
-  padding: 6;
-  border-radius: 999px;
-  color: #424242;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   
 }
 
