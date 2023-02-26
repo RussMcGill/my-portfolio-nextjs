@@ -40,7 +40,7 @@ const Skills = () => {
           {skillsArray.map((skill, index) => {
             return (
               <Link href={skill.url} target="_blank" key={index}>
-                <button className="p-6 shadow-xl rounded-xl dark:bg-grey800">
+                <button className="p-6 shadow-xl rounded-xl dark:bg-grey800 hover:scale-110 transition duration-150">
                   <Skill skill={skill} />
                 </button>
               </Link>
