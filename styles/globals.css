@@ -35,22 +35,4 @@ html {
   } */
   
 }
-.home-socials-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2;
-  max-width: 330px;
-  margin: auto;
-  padding: 4, 0, 4;
-}
-.home-socials {
-  padding: 6;
-  border-radius: 999px;
-  color: #424242;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
 
