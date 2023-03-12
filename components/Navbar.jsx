@@ -19,25 +19,25 @@ export default function Navbar({ theme, setTheme }) {
     <div className="fixed w-full h-20 shadow-xl bg-background dark:bg-grey800 z-[100]">
       <div className="flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16">
         <div className="relative">
-          <Link href="/">
-            <Image src={headerImage} alt="" width="125" height="auto" priority />
+          <Link href="/" aria-label="Home Button">
+            <Image src={headerImage} alt="Home" width="125" height="auto" priority />
           </Link>
         </div>
         <div>
           <ul className="hidden md:flex">
-            <Link href="/#home">
+            <Link href="/#home" aria-label="Home Button">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
-            <Link href="/#skills">
+            <Link href="/#skills" aria-label="Skills Button">
               <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
             </Link>
-            <Link href="/#projects">
+            <Link href="/#projects" aria-label="Projects Button">
               <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
             </Link>
-            <Link href="/#about">
+            <Link href="/#about" aria-label="About Button">
               <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
-            <Link href="/#contact">
+            <Link href="/#contact" aria-label="Contact Button">
               <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
             </Link>
             <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
@@ -72,12 +72,13 @@ export default function Navbar({ theme, setTheme }) {
         >
           <div className="flex flex-col justify-between">
             <div className="flex w-full items-center justify-between">
-              <Link href="/">
-                <Image src="/RM.png" alt="" width="125" height="50" />
+              <Link href="/" aria-label="Home Button">
+                <Image src="/RM.png" alt="Home" width="125" height="50" />
               </Link>
               <div className="flex flex-col-reverse gap-2">
                 <button
                   className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3"
+                  aria-label="Dark Mode Button"
                   onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 >
                   {theme === 'light' ? <MdDarkMode /> : <MdOutlineLightMode />}
@@ -93,19 +94,19 @@ export default function Navbar({ theme, setTheme }) {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/" onClick={() => setNav(false)}>
+              <Link href="/" aria-label="Home Button" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Home</li>
               </Link>
-              <Link href="/#about" onClick={() => setNav(false)}>
+              <Link href="/#about" aria-label="About Button" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/#skills" onClick={() => setNav(false)}>
+              <Link href="/#skills" aria-label="Skills Button" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Skills</li>
               </Link>
-              <Link href="/#projects" onClick={() => setNav(false)}>
+              <Link href="/#projects" aria-label="Project Button" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Project</li>
               </Link>
-              <Link href="/#contact" onClick={() => setNav(false)}>
+              <Link href="/#contact" aria-label="Contact Button" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Contact</li>
               </Link>
             </ul>
@@ -113,17 +114,28 @@ export default function Navbar({ theme, setTheme }) {
               <p className="uppercase tracking-widest text-primary">Let's Connect</p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={LINKEDIN.url} target="_blank" onClick={() => setNav(false)}>
+                  <Link
+                    href={LINKEDIN.url}
+                    target="_blank"
+                    aria-label="Linkedin Button"
+                    onClick={() => setNav(false)}
+                  >
                     <FaLinkedinIn />
                   </Link>
                 </div>
                 <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Link href={GITHUB.url} target="_blank" onClick={() => setNav(false)}>
+                  <Link
+                    href={GITHUB.url}
+                    target="_blank"
+                    aria-label="GitHub Button"
+                    onClick={() => setNav(false)}
+                  >
                     <FaGithub />
                   </Link>
                 </div>
                 <div className="rounded-full shadow-lg light:shadow-gray-400 dark:bg-grey700 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <button
+                    aria-label="Email Me Button"
                     onClick={() => {
                       setNav(false);
                       router.push('mailto:russ@russmcgill.com');

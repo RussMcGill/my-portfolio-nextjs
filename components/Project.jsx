@@ -7,7 +7,6 @@ import paymentCalculator from '../public/assets/projects/custom-payments.png';
 
 export default function Project({ title, backgroundImg, projectUrl }) {
   function getImages(img) {
-    console.log(img);
     switch (img) {
       case 'locate-provider':
         return locateProvider;
