@@ -9,7 +9,7 @@ export default function MainInfo() {
   const router = useRouter();
 
   return (
-    <div id="home" className="w-full h-screen text-center">
+    <div id="home" className="w-full h-screen text-center mt-20">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <div className="animate-fadeIn opacity-0">
@@ -19,7 +19,9 @@ export default function MainInfo() {
             <h1 className="p-4 text-gray-700 dark:text-white">
               Hi, I'm <span className="text-primary">Russ</span>{' '}
             </h1>
-            <h1 className="py-2 text-gray-700 dark:text-white">A Web Developer</h1>
+            <h1 className="py-2 text-gray-700 dark:text-white">
+              A<span></span>
+            </h1>
             <p className="py-4 text-gray-600 dark:text-white max-w-[70%] m-auto">
               I'm a full-stack developer specializing in building exceptional digital experiances.{' '}
             </p>

@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+// TODO: add Resume // import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { GITHUB, LINKEDIN } from '@/lib/constants';
 import { useRouter } from 'next/router';
@@ -28,14 +28,14 @@ export default function Navbar({ theme, setTheme }) {
             <Link href="/#home">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
-            <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-            </Link>
             <Link href="/#skills">
               <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
             </Link>
             <Link href="/#projects">
               <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
+            </Link>
+            <Link href="/#about">
+              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
             <Link href="/#contact">
               <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
