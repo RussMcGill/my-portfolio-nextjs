@@ -15,13 +15,13 @@ export default function Home() {
           <MainInfo />
         </div>
         <div className="snap-start md:h-screen w-screen">
-          <About />
-        </div>
-        <div className="snap-start md:h-screen w-screen">
           <Skills />
         </div>
         <div className="snap-start 4k:h-screen w-screen">
           <Projects />
+        </div>
+        <div className="snap-start md:h-screen w-screen">
+          <About />
         </div>
         <div className="snap-start 2k:h-screen w-screen">
           <Contact />

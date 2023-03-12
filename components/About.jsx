@@ -7,7 +7,6 @@ export default function About() {
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-primary">About</p>
           <h2 className="md:py-4 py-2">Who I Am</h2>
-          <p className="py-2 text-gray-600 dark:text-white">Short about title</p>
           <p className="py-2 text-gray-600 dark:text-white">
             I am Russ McGill, a highly motivated and dedicated professional with extensive
             experience in various industries. Throughout my career, I have established myself as a
