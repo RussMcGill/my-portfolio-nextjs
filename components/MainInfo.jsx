@@ -44,7 +44,10 @@ export default function MainInfo() {
             <div className="animate-dropIn1">
               <div className="active:scale-75">
                 <Link href={LINKEDIN.url} target="_blank">
-                  <button className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800 hover:scale-110 transition ease-in duration-150">
+                  <button
+                    aria-label="LinkedIn"
+                    className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800 hover:scale-110 transition ease-in duration-150"
+                  >
                     <FaLinkedinIn />
                   </button>
                 </Link>
@@ -53,7 +56,10 @@ export default function MainInfo() {
             <div className="animate-dropIn2 opacity-0">
               <div className="active:scale-75">
                 <Link href={GITHUB.url} target="_blank">
-                  <button className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800 hover:scale-110 transition ease-in duration-150">
+                  <button
+                    aria-label="GitHub"
+                    className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800 hover:scale-110 transition ease-in duration-150"
+                  >
                     <FaGithub />
                   </button>
                 </Link>
@@ -62,6 +68,7 @@ export default function MainInfo() {
             <div className="animate-dropIn3 opacity-0">
               <div className="active:scale-75">
                 <button
+                  aria-label="Email Me"
                   className="p-6 rounded-full flex justify-center items-center bg-[#ecf0f3] shadow-lg light:shadow-gray-400 dark:bg-grey800 hover:scale-110 transition ease-in duration-150"
                   onClick={() => router.push('mailto:russ@russmcgill.com')}
                 >

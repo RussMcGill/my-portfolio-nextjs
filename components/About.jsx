@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import navy from '../public/assets/home/navy.jpg';
 
 export default function About() {
   return (
@@ -27,8 +29,8 @@ export default function About() {
             <Link href="#projects">Check out some of my latest projects!</Link>
           </div>
         </div>
-        <div className="w-full h-auto m-auto shadow-xl light:shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 z-0">
-          <img className="rounded-xl" src={'/assets/home/navy.jpg'} alt="" />
+        <div className="relative w-full h-auto m-auto shadow-xl light:shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 z-0">
+          <Image className="rounded-xl" src={navy} height="100%" width="100%" alt="/" />
         </div>
       </div>
     </div>
