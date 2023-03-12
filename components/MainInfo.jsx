@@ -28,7 +28,7 @@ export default function MainInfo() {
                     skipAddStyles: true,
                     autoStart: true,
                     loop: true,
-                    cursorClassName: 'text-white animate-cursorPulse',
+                    cursorClassName: 'dark:text-white text-gray-700 animate-cursorPulse',
                   }}
                 />
               </h1>
