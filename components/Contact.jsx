@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+// TODO: import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/home/contact.jpg';
 
-const Contact = () => {
+export default function Contact() {
   const router = useRouter();
 
   return (
@@ -31,7 +31,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2">Russell McGill</h2>
+                <h2 className="py-5">Russell McGill</h2>
                 <p>Web Developer</p>
                 <p className="py-4">
                   I am available for freelance or full-time positions. Contact me and let&apos;s
@@ -135,6 +135,4 @@ const Contact = () => {
       </div>
     </div>
   );
-};
-
-export default Contact;
+}

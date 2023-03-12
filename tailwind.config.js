@@ -26,6 +26,7 @@ module.exports = {
         // primary: '#5651e5',
         primary: '#673AB7',
         background: '#ecf0f3',
+        green: '#0AFA94',
         grey900: '#212121',
         grey800: '#424242',
         grey700: '#616161',
@@ -40,11 +41,11 @@ module.exports = {
       keyframes: {
         dropIn: {
           '0%': {
-            transform: 'translateY(-200%)',
+            // transform: 'translateY(200%)',
             opacity: 0,
           },
           '100%': {
-            transform: 'translateY(0%)',
+            // transform: 'translateY(0%)',
             opacity: 1,
           },
         },
@@ -54,6 +55,17 @@ module.exports = {
           },
           '100%': {
             opacity: 1,
+          },
+        },
+        cursorPulse: {
+          '0%': {
+            opacity: 0,
+          },
+          '50%': {
+            opacity: 1,
+          },
+          '100%': {
+            opacity: 0,
           },
         },
         wiggle: {
@@ -67,6 +79,7 @@ module.exports = {
         dropIn3: 'dropIn 1s ease-in-out .6s forwards',
         fadeIn: 'fadeIn 1s ease-in 1.5s forwards',
         wiggle: 'wiggle 1s ease-in-out infinite',
+        cursorPulse: 'cursorPulse 1s ease-in-out infinite',
       },
     },
   },

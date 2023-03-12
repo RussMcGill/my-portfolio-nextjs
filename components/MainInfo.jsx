@@ -4,22 +4,35 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { GITHUB, LINKEDIN } from '@/lib/constants';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Typewriter from 'typewriter-effect';
 
 export default function MainInfo() {
   const router = useRouter();
 
   return (
-    <div id="home" className="w-full h-screen text-center">
+    <div id="home" className="w-full h-screen text-center mt-20">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
-          <div className="animate-fadeIn opacity-0">
+          {/* <div className="animate-fadeIn opacity-0"> */}
+          <div>
             <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-white">
               let's build something awesome together
             </p>
-            <h1 className="p-4 text-gray-700 dark:text-white">
-              Hi, I'm <span className="text-primary">Russ</span>{' '}
-            </h1>
-            <h1 className="py-2 text-gray-700 dark:text-white">A Web Developer</h1>
+            <h1 className="p-4 text-gray-700 dark:text-white">Hi, I'm Russ</h1>
+            <div className="flex flex-col justify-center">
+              <h1 className="py-2 text-gray-700 dark:text-white">{'A '} </h1>
+              <h1 className="py-2 text-primary">
+                <Typewriter
+                  options={{
+                    strings: ['Web Developer', 'Leader', 'Military Veteran'],
+                    skipAddStyles: true,
+                    autoStart: true,
+                    loop: true,
+                    cursorClassName: 'dark:text-white text-gray-700 animate-cursorPulse',
+                  }}
+                />
+              </h1>
+            </div>
             <p className="py-4 text-gray-600 dark:text-white max-w-[70%] m-auto">
               I'm a full-stack developer specializing in building exceptional digital experiances.{' '}
             </p>
