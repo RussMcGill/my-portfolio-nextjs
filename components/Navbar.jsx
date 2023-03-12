@@ -40,7 +40,10 @@ export default function Navbar({ theme, setTheme }) {
             <Link href="/#contact" aria-label="Contact Button">
               <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
             </Link>
-            <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            <button
+              aria-label="Dark Mode Button"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
               <li>
                 {theme === 'light' ? (
                   <MdDarkMode className="ml-10" />
