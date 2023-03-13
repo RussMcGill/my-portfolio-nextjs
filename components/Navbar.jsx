@@ -19,7 +19,7 @@ export default function Navbar({ theme, setTheme }) {
     <div className="fixed w-full h-20 shadow-xl bg-background dark:bg-blueBackground z-[100]">
       <div className="flex justify-between items-center w-full h-full px-5 md:px-10 3xl:p-16">
         <div>
-          <Link href="/" aria-label="Home Button">
+          <Link href="/#home" aria-label="Home Button">
             <Image src={headerImage} alt="Home" width="150" height="auto" priority />
           </Link>
         </div>
@@ -75,7 +75,7 @@ export default function Navbar({ theme, setTheme }) {
         >
           <div className="flex flex-col justify-between">
             <div className="flex w-full items-center justify-between">
-              <Link href="/" aria-label="Home Button">
+              <Link href="/#home" aria-label="Home Button">
                 <Image src={headerImage} alt="Home" width="150" height="50" />
               </Link>
               <div className="flex flex-col-reverse gap-2">
