@@ -24,7 +24,7 @@ module.exports = {
       },
       colors: {
         // primary: '#5651e5',
-        primary: '#673AB7',
+        primary: '#0AFA94',
         background: '#ecf0f3',
         green: '#0AFA94',
         grey900: '#212121',
@@ -37,6 +37,10 @@ module.exports = {
         grey200: '#EEEEEE',
         grey100: '#F5F5F5',
         grey50: '#FAFAFA',
+        blueBackground: '#242845',
+        blueStep1: '#1E213A',
+        blueStep2: '#10121D',
+        white: '#ffffff',
       },
       keyframes: {
         dropIn: {

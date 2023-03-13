@@ -18,9 +18,9 @@ export default function Project({ title, backgroundImg, projectUrl }) {
   }
   return (
     <Link href={projectUrl}>
-      <div className="relative flex flex-col gap-5 items-center justify-between h-auto w-full bg-white dark:bg-grey800 p-5 shadow-xl rounded-xl hover:scale-105 transition duration-150">
+      <div className="relative flex flex-col gap-5 items-center justify-between h-auto w-full bg-white dark:bg-blueStep1 p-5 shadow-xl rounded-xl hover:scale-105 transition duration-150">
         <div>
-          <h2 className="text-primary dark:text-grey200">{title}</h2>
+          <h2 className="text-primary dark:text-grey200 text-center">{title}</h2>
         </div>
         <div>
           <Image
