@@ -28,11 +28,11 @@ export default function Container({ children }) {
     <>
       <Head>
         <title>Russ McGill | Software Engineer</title>
-        <meta name='description' content='Software Engineer' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
+        <meta name="description" content="Software Engineer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar theme={theme} setTheme={setTheme} />
+      <Navbar theme={'dark'} setTheme={setTheme} />
       {...Children.toArray(children)}
     </>
   );
