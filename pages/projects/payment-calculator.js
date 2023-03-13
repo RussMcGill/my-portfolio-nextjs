@@ -35,7 +35,7 @@ export default function ForestAdminCRM() {
         <h1 className="text-center text-primary">Technologies</h1>
         <div className="flex gap-2 justify-around flex-wrap">
           {project.techStack.map((tech, i) => (
-            <div key={i} className="p-2 dark:bg-grey300 rounded-xl">
+            <div key={i} className="p-2 dark:bg-blueStep1 rounded-xl">
               <Image src={tech.img} key={i} alt={tech.name} width={75} height={75} />
             </div>
           ))}
@@ -48,12 +48,12 @@ export default function ForestAdminCRM() {
         <div className="flex gap-2 flex-col justify-center">
           <div className="m-auto">
             <Link href={project.liveUrl} target="_blank">
-              <button className="rounded bg-primary p-2 text-white">
+              <button className="rounded bg-blueStep2 p-3 text-primary">
                 View {project.title} Live
               </button>
             </Link>
           </div>
-          <div className="text-center max-w-[75vw]">
+          <div className="text-center max-w-[75vw] mt-2">
             <p>(Please note: Customer has to be logged in to view this page)</p>
           </div>
         </div>

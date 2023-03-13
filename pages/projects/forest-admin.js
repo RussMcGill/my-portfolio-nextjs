@@ -33,7 +33,7 @@ export default function ForestAdminCRM() {
         <h1 className="text-center text-primary">Technologies</h1>
         <div className="flex gap-2 justify-around flex-wrap">
           {project.techStack.map((tech, i) => (
-            <div key={i} className="p-2 dark:bg-grey300 rounded-xl">
+            <div key={i} className="p-2 dark:bg-blueStep1 rounded-xl">
               <Image src={tech.img} key={i} alt={tech.name} width={75} height={75} />
             </div>
           ))}
