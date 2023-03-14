@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import Navbar from '@/components/Navbar';
 
 export default function Container({ children }) {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme('dark');
 
   // TODO: Put this back in when the mobile animation bug is fixed
   // TODO: We want the user to see proper animations on initial page load

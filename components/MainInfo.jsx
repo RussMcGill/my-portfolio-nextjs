@@ -11,7 +11,7 @@ export default function MainInfo() {
 
   return (
     <>
-      <div id="home" className="w-full h-screen text-center mt-20 flex justify-center">
+      <div id="home" className="w-full h-screen text-center  flex justify-center">
         <div className="max-w-[1240px] w-full h-full p-2 flex flex-col justify-center items-center">
           <h2 className="uppercase tracking-widest text-gray-600 dark:text-white">
             let's build something awesome together
