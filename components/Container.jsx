@@ -8,13 +8,13 @@ export default function Container({ children }) {
 
   // TODO: Put this back in when the mobile animation bug is fixed
   // TODO: We want the user to see proper animations on initial page load
-  // useEffect(() => {
-  //   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  //     setTheme('dark');
-  //   } else {
-  //     setTheme('light');
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+    } else {
+      setTheme('dark');
+    }
+  }, []);
 
   useEffect(() => {
     if (theme === 'dark') {
