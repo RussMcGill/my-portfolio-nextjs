@@ -97,7 +97,7 @@ export default function Navbar({ theme, setTheme }) {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/" aria-label="Home Button" onClick={() => setNav(false)}>
+              <Link href="/#home" aria-label="Home Button" onClick={() => setNav(false)}>
                 <li className="py-4 text-sm">Home</li>
               </Link>
               <Link href="/#about" aria-label="About Button" onClick={() => setNav(false)}>
