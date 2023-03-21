@@ -35,7 +35,7 @@ export default function MainInfo() {
             <h3 className="py-4 text-gray-600 dark:text-white max-w-[70%] w-full m-auto">
               specializing in building
               <p className="text-green font-bold">
-                exceptional digital experiances
+                exceptional digital experiences
                 <span className="text-gray-600 dark:text-white">.</span>
               </p>
             </h3>
